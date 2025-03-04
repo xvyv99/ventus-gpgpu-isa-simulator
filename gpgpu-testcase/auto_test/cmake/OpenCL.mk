@@ -1,4 +1,4 @@
-VENTUS_INSTALL_PREFIX ?= /root/ventus/llvm-project/install
+VENTUS_INSTALL_PREFIX ?= ./
 
 SOURCE_PATH ?= ./
 

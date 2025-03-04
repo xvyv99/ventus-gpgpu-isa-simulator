@@ -15,8 +15,14 @@ function(add_spike_test_opencl target kernel_func)
 endfunction()
 
 function(add_spike_test_makefile target kernel_func makefile_path)
+  file(GLOB TEST_SRCS
+    "${CMAKE_CURRENT_SOURCE_DIR}/${target}/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/${target}/*.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/${target}/*.hpp"
+  )
+
   add_executable( test_${target} 
-      ${CMAKE_CURRENT_SOURCE_DIR}/${target}/test.cc
+      ${TEST_SRCS}
   )
 
   add_dependencies( test_${target} ${PROJECT} )

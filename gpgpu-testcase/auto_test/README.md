@@ -14,7 +14,7 @@ To add a new test, such as validating your custom `vectorAdd` OpenCL code, follo
 
 2. Add the following files to your new folder:
    - `vecadd.cl`: The OpenCL code you need to validate (note that this filename must match your folder name)
-   - `test.cc`: The C++ code that calls your OpenCL kernel function (this filename is mandatory)
+   - `test.cpp`: The C++ code that calls your OpenCL kernel function (this filename is mandatory)
 
 > [!WARNING]
 > Currently, folder names cannot contain the characters `-`, `+`, or `.` as these will cause test failures for reasons that remain unclear.
